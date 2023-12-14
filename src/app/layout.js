@@ -8,8 +8,6 @@ import 'src/styles/globals.css';
 // do not cache this layout
 export const revalidate = 0;
 
-export const runtime = 'edge'
-
 export default async function RootLayout({ children }) {
   const supabase = createServerComponentClient({ cookies });
 
