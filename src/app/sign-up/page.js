@@ -4,6 +4,8 @@ import { redirect } from 'next/navigation';
 
 import SignUp from 'src/components/Auth/SignUp';
 
+export const runtime = 'edge';
+
 export default async function SignUpPage() {
   const supabase = createServerComponentClient({ cookies });
   const { data } = await supabase.auth.getSession();

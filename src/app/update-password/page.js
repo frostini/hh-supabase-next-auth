@@ -4,6 +4,8 @@ import { redirect } from 'next/navigation';
 
 import UpdatePassword from 'src/components/Auth/UpdatePassword';
 
+export const runtime = 'edge';
+
 export default async function UpdatePasswordPage() {
   const supabase = createServerComponentClient({ cookies });
 

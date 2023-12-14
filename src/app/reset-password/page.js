@@ -4,6 +4,8 @@ import { redirect } from 'next/navigation';
 
 import ResetPassword from 'src/components/Auth/ResetPassword';
 
+export const runtime = 'edge';
+
 export default async function ResetPasswordPage() {
   const supabase = createServerComponentClient({ cookies });
   const { data } = await supabase.auth.getSession();
