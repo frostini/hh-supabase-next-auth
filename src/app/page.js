@@ -5,6 +5,8 @@ import { redirect } from 'next/navigation';
 
 import SignOut from 'src/components/SignOut';
 
+export const runtime = 'edge'
+
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies });
 
